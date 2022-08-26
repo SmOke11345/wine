@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6em;
+}
+
+div, p, a, button, input, form, span, ul, li  {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    line-height: 3.4em;
+}
+h3 {
+    font-size: 18px;
+    line-height: 1.8em;
+}
+
+%differentSides {
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+// header
+.background {
+    background: url(./img/backgound.svg);
+    background-size: cover;
+    #header {
+        padding-top: 30px;
+        .nav {
+            .address {
+                @extend %differentSides;
+                padding-bottom: 20px;
+                .street p, .tel p {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+.btns {
+    display: flex;
+    .btn {
+        padding: 10px 107px;
+        border: 1px solid #ffffff;
+        transition: ease-in-out .8s;
+        cursor: pointer;
+        &:hover {
+            background-color: #99862A;
+        }
+    }
+    .btn.left {
+        border-left: none;
+    }
+    .btn.right {
+        border-right: none;
+    }
+    
+}
+
+// btnsMain
+#btnsMain {
+    padding: 583px 0 150px;
+    .btnsMain {
+        @extend %differentSides;
+        max-width: 415px;
+        margin: auto;
+    }
+}
+.button a p {
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 15px 30px;
+    background: #998431;
+    transition: ease-in-out 1s;
+    &:hover {
+        background-color: #af9839;
+        transform: scale(1.1);
+    }
+}
+
+// comment
+#comment , #feedBack {
+    background-color: #282828;
+    padding: 100px 0;
+}
+ 
+.comment {
+    padding: 60px 187px;
+    border: 3px solid #C4C4C4;
+    text-align: center;
+    .textComment p {
+        font-size: 16px;
+        font-weight: normal;
+    }
+    .wineGlass {
+        padding-top: 50px;
+    }
+}
+
+.separator {
+    border: 1px solid #FFFFFF;
+    margin: 10px auto 40px;
+    width: 160px;
+}
+
+// newCollectin
+#newCollection {
+    padding: 60px 0;
+    background-color: #E6E3C4;
+    color: #000;
+    .wrapper {
+        @extend %differentSides;
+        border-top: 1px solid #998431;
+        border-bottom: 1px solid #998431;
+        padding: 60px 0;
+        .contentLeftSide {
+            .main p {
+                font-size: 16px;
+            }
+            .title h2 {
+                margin-top: 30px;
+                max-width: 300px;
+                line-height: 1.2em;
+            }
+            .separator {
+                border-color: #000;
+                margin: 30px 0 0;
+            }
+            .yearGrig {
+                display: grid;
+                grid-template-columns: repeat(1, 80px 363px);
+                align-items: center;
+                justify-items: center;
+                margin-top: 30px;
+            }
+            .button a p {
+                max-width: 254px;
+                margin-top: 25px;
+            }
+        }
+        .contentImg {
+            .img2 { 
+                padding-top: 30px;
+                display: grid;
+                gap: 30px;
+            }
+            .img3 {
+                grid-column: 2/2;
+            }
+        }
+    }
+}
+.year {
+    padding: 24px;
+    border-right: 1px solid #282828;
+    border-bottom: 1px solid #282828;
+}
+.nameEvent {
+    padding: 9.2px 34px;
+    border-bottom: 1px solid #282828;
+    .subtitle p {
+        margin-top: 0;
+    }
+}
+.lorem p , .subtitle p {
+    max-width: 445px;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 25px;
+}
+.lineBottomNone {
+    border-bottom: none;
+}
+.imgCollection {
+    width: 100%;
+}
+
+
+// feedBack 
+.feedBack {
+    display: flex;
+    justify-content: space-around;
+    border: 3px solid #C4C4C4;
+    position: relative;
+    .sing {
+        text-align: center;
+        max-width: 540px;
+        padding-bottom: 80px;
+        .title  {
+            position: absolute;
+            top: -64px;
+            left: 30%;
+            background-color: #282828;
+            padding: 0 50px;
+        }
+        .separator {
+            margin-top: 65px;
+            max-width: 120px;
+        }
+        .subtitle p {
+            font-size: 16px;
+            opacity: 0.8;
+        }
+        #form {
+            margin-top: 80px;
+            input , select {
+                font-size: 13px;
+                color: #FFFFFF;
+                background: #282828;
+                border: none;
+                font-family: 'Montserrat', sans-serif;
+                
+            }
+            input[type="text"] , input[type="tel"], select {
+                width: 254px;
+                padding: 10px;
+                border-bottom: 1px solid #FFFFFF;
+            }
+            input[type="text"] {
+                margin-right: 27px;
+            }
+            .place > select , input[type="submit"]  {
+                width: 100%;
+                margin-top: 40px;
+            }
+            input[type="submit"] {
+                text-transform: uppercase;
+                border: 1px solid #FFFFFF;
+                padding: 15px 0;
+                transition: ease-in-out .8s;
+                cursor: pointer;
+                &:hover {
+                    background-color: #493b3b;
+                }
+            }
+            input::-webkit-input-placeholder { 
+                color: #FFFFFF; 
+                opacity: 0.91;
+            }
+        }
+        
+    }
+}
+.grape {
+    position: absolute;
+    top: -65px;
+    left: -40px;
+}
+.barrel {
+    position: absolute;
+    top: -65px;
+    right: -40px;
+}
+
+
+// footer
+
+#footer {
+    padding: 50px 0;
+    background: #998431;
+}
+.footerNav {
+    @extend %differentSides;
+    padding: 0 120px;
+    border-top: 1px solid #FFFFFF;
+    a p {
+        font-size: 14px;
+        font-weight: normal;
+        padding: 20px 0;
+    }
+}
+.footerInf {
+    .btn.footerInf {
+        a p {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 14px;
+        }
+    }
+}
+
+    
+
+.btn.footerInf {
+    padding: 20px 47px;
+}
+.btn.left.footerInf {
+    padding-left: 120px;
+}
+.btn.right.footerInf {
+    padding-right: 118px;
+}
+
+.links {
+    margin-right: 35px;
+}
+
+
