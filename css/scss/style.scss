@@ -13,6 +13,10 @@ p {
     font-size: 16px;
     line-height: 1.6em;
 }
+a {
+    text-decoration: none;
+    color: white;
+}
 
 div, p, a, button, input, form, span, ul, li  {
     box-sizing: border-box;
@@ -22,6 +26,16 @@ div, p, a, button, input, form, span, ul, li  {
     max-width: 1110px;
     width: 100%;
     margin: 0 auto;
+}
+@media screen and (max-width: 1200px) {
+    .container{
+        max-width: 960px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .container{
+        max-width: 720px;
+    }
 }
 
 h1, h2, h3, h4 {
@@ -39,10 +53,6 @@ h3 {
     justify-content: space-between;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
 
 // header
 .background {
@@ -64,7 +74,7 @@ a {
 .btns {
     display: flex;
     .btn {
-        padding: 10px 107px;
+        padding: 10px 99px;
         border: 1px solid #ffffff;
         transition: ease-in-out .8s;
         cursor: pointer;
@@ -77,10 +87,18 @@ a {
     }
     .btn.right {
         border-right: none;
-    }
-    
+    } 
 }
-
+@media screen and (max-width: 1200px) {
+    .btns .btn {
+        padding: 10px 80px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .btns .btn {
+        padding: 10px 50px;
+    }
+}
 // btnsMain
 #btnsMain {
     padding: 583px 0 150px;
@@ -99,6 +117,11 @@ a {
     &:hover {
         background-color: #af9839;
         transform: scale(1.1);
+    }
+}
+@media screen and (max-width: 1200px) {
+    #btnsMain {
+        padding-top: 450px;
     }
 }
 
@@ -127,6 +150,23 @@ a {
     width: 160px;
 }
 
+@media screen and (max-width: 1200px) {
+    .comment {
+        padding: 60px 138px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .comment {
+        padding: 60px 63px;
+    }
+    .title h2 {
+        line-height: 1.6em;
+    }
+    .separator {
+        margin-top: 35px;
+    }
+}
+
 // newCollectin
 #newCollection {
     padding: 60px 0;
@@ -138,6 +178,13 @@ a {
         border-bottom: 1px solid #998431;
         padding: 60px 0;
         .contentLeftSide {
+
+            .lorem p , .subtitle p {
+                max-width: 445px;
+                font-size: 14px;
+                font-weight: normal;
+                margin-top: 25px;
+            }
             .main p {
                 font-size: 16px;
             }
@@ -157,9 +204,30 @@ a {
                 justify-items: center;
                 margin-top: 30px;
             }
+            .nameEvent {
+                padding: 9.2px 34px;
+                border-bottom: 1px solid #282828;
+                .subtitle p {
+                    margin-top: 0;
+                }
+                
+            }
+            @media screen and (max-width: 1200px) {
+                    .nameEvent {
+                        padding: 5.1px 36px;
+                    }
+                }
+            .lineBottomNone {
+                border-bottom: none;
+            }
             .button a p {
                 max-width: 254px;
                 margin-top: 25px;
+            }
+        }
+        @media screen and (max-width: 1200px) {
+            .contentLeftSide {
+                padding-right: 40px;
             }
         }
         .contentImg {
@@ -171,6 +239,12 @@ a {
             .img3 {
                 grid-column: 2/2;
             }
+            @media screen and (max-width: 992px) {
+                .img3 {
+                    grid-row: 1/2;
+                    grid-column: 1/1;
+                }
+            }
         }
     }
 }
@@ -179,24 +253,14 @@ a {
     border-right: 1px solid #282828;
     border-bottom: 1px solid #282828;
 }
-.nameEvent {
-    padding: 9.2px 34px;
-    border-bottom: 1px solid #282828;
-    .subtitle p {
-        margin-top: 0;
-    }
-}
-.lorem p , .subtitle p {
-    max-width: 445px;
-    font-size: 14px;
-    font-weight: normal;
-    margin-top: 25px;
-}
-.lineBottomNone {
-    border-bottom: none;
-}
-.imgCollection {
+.img {
     width: 100%;
+}
+@media screen and (max-width: 1200px) {
+    .year {
+        padding: 20px;
+    }
+    
 }
 
 
@@ -211,14 +275,12 @@ a {
         max-width: 540px;
         padding-bottom: 80px;
         .title  {
-            position: absolute;
-            top: -64px;
-            left: 30%;
+            transform: translate(5%, -50%);
+            max-width: 490px;
             background-color: #282828;
-            padding: 0 50px;
         }
         .separator {
-            margin-top: 65px;
+            margin-top: -40px;
             max-width: 120px;
         }
         .subtitle p {
@@ -266,16 +328,16 @@ a {
     }
 }
 .grape {
-    position: absolute;
-    top: -65px;
-    left: -40px;
+    transform: translate(-20%, -13%);
 }
 .barrel {
-    position: absolute;
-    top: -65px;
-    right: -40px;
+    transform: translate(21%, -12%);
 }
-
+@media screen and (max-width: 1200px) {
+    .grape, .barrel {
+        display: none;
+    }
+}
 
 // footer
 
@@ -303,8 +365,6 @@ a {
     }
 }
 
-    
-
 .btn.footerInf {
     padding: 20px 47px;
 }
@@ -318,5 +378,22 @@ a {
 .links {
     margin-right: 35px;
 }
-
-
+@media screen and (max-width: 1200px) {
+    .footerNav {
+        padding: 0;
+    }
+    .btn.left.footerInf {
+        padding-left: 0;
+    }
+    .btn.right.footerInf {
+        padding-right: 87px;
+    }  
+}
+@media screen and (max-width: 992px) {
+    .footerNav {
+        border-bottom: 1px solid #FFFFFF;
+    }
+    .footerInf {
+        display: none;
+    }
+}
