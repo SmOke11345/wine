@@ -13,6 +13,11 @@ p {
     font-size: 16px;
     line-height: 1.6em;
 }
+@media screen and (max-width: 576px) {
+    p {
+        font-size: 14px;
+    }
+}
 a {
     text-decoration: none;
     color: white;
@@ -35,6 +40,16 @@ div, p, a, button, input, form, span, ul, li  {
 @media screen and (max-width: 992px) {
     .container{
         max-width: 720px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .container{
+        max-width: 540px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .container {
+        max-width: 96.7%;
     }
 }
 
@@ -64,11 +79,30 @@ h3 {
             .address {
                 @extend %differentSides;
                 padding-bottom: 20px;
+                .menu {
+                    display: none;
+                }
                 .street p, .tel p {
                     font-size: 13px;
                 }
+                @media screen and (max-width: 576px) {
+                    .street {
+                        display: none;
+                    }
+                    .menu {
+                        display: block;
+                    }
+                }
             }
+            @media screen and (max-width: 576px) {
+                .address {
+                    align-items: center;
+                }
+                
+            }
+           
         }
+        
     }
 }
 .btns {
@@ -99,6 +133,16 @@ h3 {
         padding: 10px 50px;
     }
 }
+@media screen and (max-width: 768px) {
+    .btns .btn {
+        padding: 10px 27.5px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .btns {
+        display: none;
+    }
+}
 // btnsMain
 #btnsMain {
     padding: 583px 0 150px;
@@ -124,13 +168,29 @@ h3 {
         padding-top: 450px;
     }
 }
+@media screen and (max-width: 576px) {
+    #btnsMain {
+        padding-top: 370px;
+    }
+    .btnsMain {
+        flex-direction: column;
+        
+    }
+    .button.second {
+        padding-top: 15px;
+    }
+}
 
 // comment
 #comment , #feedBack {
     background-color: #282828;
     padding: 100px 0;
 }
- 
+@media screen and (max-width: 576px) {
+    #comment , #feedBack {
+        padding: 75px 0;
+    }
+}
 .comment {
     padding: 60px 187px;
     border: 3px solid #C4C4C4;
@@ -142,6 +202,7 @@ h3 {
     .wineGlass {
         padding-top: 50px;
     }
+    
 }
 
 .separator {
@@ -166,7 +227,17 @@ h3 {
         margin-top: 35px;
     }
 }
-
+@media screen and (max-width: 576px) {
+    .comment {
+        padding: 55px 8px;
+    }
+    .comment .textComment p {
+        font-size: 14px;
+    }
+    .title h2 {
+        font-size: 28px;
+    }
+}
 // newCollectin
 #newCollection {
     padding: 60px 0;
@@ -178,7 +249,7 @@ h3 {
         border-bottom: 1px solid #998431;
         padding: 60px 0;
         .contentLeftSide {
-
+            
             .lorem p , .subtitle p {
                 max-width: 445px;
                 font-size: 14px;
@@ -193,6 +264,11 @@ h3 {
                 max-width: 300px;
                 line-height: 1.2em;
             }
+            @media screen and (max-width: 576px) {
+                .title h2 {
+                    max-width: 100%;
+                }
+            }
             .separator {
                 border-color: #000;
                 margin: 30px 0 0;
@@ -203,6 +279,12 @@ h3 {
                 align-items: center;
                 justify-items: center;
                 margin-top: 30px;
+            }
+            @media screen and (max-width: 576px) {
+                .yearGrig {
+                    grid-template-columns: repeat(1, 72px 235px);
+                    align-items: stretch;
+                } 
             }
             .nameEvent {
                 padding: 9.2px 34px;
@@ -224,10 +306,29 @@ h3 {
                 max-width: 254px;
                 margin-top: 25px;
             }
+            @media screen and (max-width: 768px) {
+                .button a p {
+                   max-width: 100%;
+                   text-align: center;
+                }
+            }
         }
         @media screen and (max-width: 1200px) {
             .contentLeftSide {
                 padding-right: 40px;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .contentLeftSide {
+                justify-content: center;
+            }
+        }
+        @media screen and (max-width: 576px) {
+            .contentLeftSide {
+                padding: 0;
+            }
+            .title h2 {
+                max-width: 100%;
             }
         }
         .contentImg {
@@ -246,6 +347,16 @@ h3 {
                 }
             }
         }
+        @media screen and (max-width: 768px) {
+            .contentImg {
+                display: none;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .wrapper {
+            justify-content: space-around;
+        }           
     }
 }
 .year {
@@ -279,9 +390,19 @@ h3 {
             max-width: 490px;
             background-color: #282828;
         }
+        @media screen and (max-width: 768px) {
+            .title {
+                transform: translate(2%, -50%);
+            }
+        }
         .separator {
             margin-top: -40px;
             max-width: 120px;
+        }
+        @media screen and (max-width: 576px) {
+            .separator {
+                margin-top: -10px;
+            }
         }
         .subtitle p {
             font-size: 16px;
@@ -301,6 +422,11 @@ h3 {
                 width: 254px;
                 padding: 10px;
                 border-bottom: 1px solid #FFFFFF;
+            }
+            @media screen and (max-width: 768px) {
+                input[type="text"] , input[type="tel"], select {
+                    width: auto;
+                }
             }
             input[type="text"] {
                 margin-right: 27px;
@@ -323,10 +449,28 @@ h3 {
                 color: #FFFFFF; 
                 opacity: 0.91;
             }
+            @media screen and (max-width: 576px) {
+                input[type="text"] {
+                    margin-right: 0;
+                }
+                input[type="tel"] {
+                    margin-top: 15px;
+                }
+                .contactInfo {
+                    flex-direction: column;
+                    display: flex;
+                }
+
+            }
         }
-        
+    }
+    @media screen and (max-width: 768px) {
+       .sing {
+            padding: 0 15px 40px 15px;
+       } 
     }
 }
+
 .grape {
     transform: translate(-20%, -13%);
 }
@@ -353,6 +497,13 @@ h3 {
         font-size: 14px;
         font-weight: normal;
         padding: 20px 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    .footerNav {
+        a p {
+            font-size: 12px;
+        }
     }
 }
 .footerInf {
@@ -397,3 +548,46 @@ h3 {
         display: none;
     }
 }
+@media screen and (max-width: 576px) {
+    .d-none {
+        display: none;
+    }
+    
+}
+
+// menuBar 
+.menuBar {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #282828;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.close {
+    padding: 30px;
+}
+.menuBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .link h2 {
+        font-size: 24px;
+    }
+    .linkB a p {
+        text-transform: uppercase;
+    }
+    .bottom {
+        margin-top: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .linkB {
+            padding-top: 15px;
+        }
+    }
+}
+
