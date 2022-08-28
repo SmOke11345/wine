@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@1,600&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -55,18 +56,29 @@ div, p, a, button, input, form, span, ul, li  {
 
 h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
-    font-size: 36px;
+    font-size: 34px;
     line-height: 3.4em;
+}
+h1 {
+    font-size: 46px;
 }
 h3 {
     font-size: 18px;
     line-height: 1.8em;
 }
 
+
+// variables
 %differentSides {
     display: flex;
     justify-content: space-between;
 }
+%menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
 
 
 // header
@@ -128,7 +140,7 @@ h3 {
         padding: 10px 80px;
     }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 992px) {
     .btns .btn {
         padding: 10px 50px;
     }
@@ -145,11 +157,23 @@ h3 {
 }
 // btnsMain
 #btnsMain {
-    padding: 583px 0 150px;
+    padding-bottom: 150px;
+    .title h1 {
+        text-align: center;
+        line-height: normal;
+        padding-top: 300px;
+    }
+    @media screen and (max-width: 768px) {
+        .title h1 {
+            padding-top: 200px;
+            font-size: 42px;
+        }
+    }
     .btnsMain {
         @extend %differentSides;
         max-width: 415px;
         margin: auto;
+        padding-top: 160px;
     }
 }
 .button a p {
@@ -163,18 +187,15 @@ h3 {
         transform: scale(1.1);
     }
 }
-@media screen and (max-width: 1200px) {
-    #btnsMain {
-        padding-top: 450px;
-    }
-}
 @media screen and (max-width: 576px) {
-    #btnsMain {
-        padding-top: 370px;
-    }
     .btnsMain {
         flex-direction: column;
-        
+    }
+    .button a p {
+        text-align: center;
+        &:hover {
+            transform: none;
+        }
     }
     .button.second {
         padding-top: 15px;
@@ -276,8 +297,6 @@ h3 {
             .yearGrig {
                 display: grid;
                 grid-template-columns: repeat(1, 80px 363px);
-                align-items: center;
-                justify-items: center;
                 margin-top: 30px;
             }
             @media screen and (max-width: 576px) {
@@ -287,7 +306,7 @@ h3 {
                 } 
             }
             .nameEvent {
-                padding: 9.2px 34px;
+                padding: 9.2px 44px;
                 border-bottom: 1px solid #282828;
                 .subtitle p {
                     margin-top: 0;
@@ -569,10 +588,7 @@ h3 {
     padding: 30px;
 }
 .menuBtn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @extend %menu;
     .link h2 {
         font-size: 24px;
     }
@@ -580,11 +596,8 @@ h3 {
         text-transform: uppercase;
     }
     .bottom {
+        @extend %menu;
         margin-top: 35px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         .linkB {
             padding-top: 15px;
         }
