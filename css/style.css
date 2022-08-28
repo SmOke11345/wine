@@ -111,6 +111,11 @@ h3 {
     align-items: center;
   }
 }
+@media screen and (max-width: 576px) {
+  .background #header {
+    padding-top: 5px;
+  }
+}
 
 .btns {
   display: flex;
@@ -161,7 +166,7 @@ h3 {
 }
 @media screen and (max-width: 768px) {
   #btnsMain .title h1 {
-    padding-top: 200px;
+    padding-top: 175px;
     font-size: 42px;
   }
 }
@@ -184,6 +189,9 @@ h3 {
 }
 
 @media screen and (max-width: 576px) {
+  #btnsMain {
+    padding-bottom: 50px;
+  }
   .btnsMain {
     flex-direction: column;
   }
